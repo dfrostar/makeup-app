@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakeupHub - Your Ultimate Makeup Directory</title>
+    <meta name="description" content="Discover the latest makeup trends, products, and tutorials at MakeupHub. Your one-stop destination for all things beauty.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">MakeupHub</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#categories">Categories</a>
+                <a href="#trending">Trending</a>
+                <a href="#looks">Looks</a>
+                <a href="#virtual-tryon">Try-On</a>
+                <a href="#ingredients">Ingredients</a>
+                <a href="#personalization">Quiz</a>
+                <a href="#sustainability">Sustainability</a>
+            </div>
+            <div class="search-container">
+                <input type="search" placeholder="Search products, brands...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Discover Your Perfect Look</h1>
+                <p>Explore our curated collection of premium makeup products and expert beauty tips</p>
+                <a href="#categories" class="cta-button">Explore Categories</a>
+            </div>
+            <div class="hero-background" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+        </section>
+
+        <section id="categories" class="featured-categories">
+            <h2>Makeup Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="face">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1596704017234-0e70f8d4be56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                    <h3>Face</h3>
+                    <ul class="category-items">
+                        <li>Foundation</li>
+                        <li>Concealer</li>
+                        <li>Blush</li>
+                        <li>Bronzer</li>
+                    </ul>
+                </div>
+                <div class="category-card" data-category="eyes">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1583241475880-083f84372725?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                    <h3>Eyes</h3>
+                    <ul class="category-items">
+                        <li>Eyeshadow</li>
+                        <li>Eyeliner</li>
+                        <li>Mascara</li>
+                        <li>Brows</li>
+                    </ul>
+                </div>
+                <div class="category-card" data-category="lips">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                    <h3>Lips</h3>
+                    <ul class="category-items">
+                        <li>Lipstick</li>
+                        <li>Lip Gloss</li>
+                        <li>Lip Liner</li>
+                        <li>Lip Care</li>
+                    </ul>
+                </div>
+                <div class="category-card" data-category="tools">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80');"></div>
+                    <h3>Tools</h3>
+                    <ul class="category-items">
+                        <li>Brushes</li>
+                        <li>Sponges</li>
+                        <li>Applicators</li>
+                        <li>Mirrors</li>
+                    </ul>
+                </div>
+                <div class="category-card featured-category" data-category="clean">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?ixlib=rb-4.0.3');"></div>
+                    <div class="category-badges">
+                        <span class="certification-badge" title="Leaping Bunny Certified">🐰</span>
+                        <span class="certification-badge" title="EcoCert">🌱</span>
+                    </div>
+                    <h3>Clean Beauty</h3>
+                    <ul class="category-items">
+                        <li>Zero-Waste</li>
+                        <li>Refillable</li>
+                        <li>Organic</li>
+                        <li>Vegan</li>
+                    </ul>
+                </div>
+                <div class="category-card featured-category" data-category="multiuse">
+                    <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3');"></div>
+                    <h3>Multi-Use</h3>
+                    <ul class="category-items">
+                        <li>Lip & Cheek</li>
+                        <li>Eye & Face</li>
+                        <li>Cream Palettes</li>
+                        <li>Versatile Tools</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="trending" class="trending-products">
+            <h2>Trending Now</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="clean">Clean Beauty</button>
+                <button class="filter-btn" data-filter="inclusive">Inclusive Shades</button>
+                <button class="filter-btn" data-filter="innovative">Innovative Formulas</button>
+            </div>
+            <div class="product-carousel">
+                <div class="product-card" data-category="clean innovative">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1631730359585-38a4935cbec4?ixlib=rb-4.0.3');"></div>
+                    <div class="product-info">
+                        <span class="product-badge">Clean Beauty</span>
+                        <h3>Luminous Foundation</h3>
+                        <p>Fenty Beauty</p>
+                        <div class="product-details">
+                            <span class="price">$34.99</span>
+                            <span class="rating">★★★★★ (128)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="inclusive">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1599305090598-fe179d501227?ixlib=rb-4.0.3');"></div>
+                    <div class="product-info">
+                        <span class="product-badge">50 Shades</span>
+                        <h3>Nude Eyeshadow Palette</h3>
+                        <p>Huda Beauty</p>
+                        <div class="product-details">
+                            <span class="price">$65.00</span>
+                            <span class="rating">★★★★½ (256)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="clean">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1586495777744-4413f21062fa?ixlib=rb-4.0.3');"></div>
+                    <div class="product-info">
+                        <span class="product-badge">Vegan</span>
+                        <h3>Matte Lipstick Collection</h3>
+                        <p>MAC Cosmetics</p>
+                        <div class="product-details">
+                            <span class="price">$19.99</span>
+                            <span class="rating">★★★★★ (512)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="innovative">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3');"></div>
+                    <div class="product-info">
+                        <span class="product-badge">New Formula</span>
+                        <h3>Serum Foundation</h3>
+                        <p>The Ordinary</p>
+                        <div class="product-details">
+                            <span class="price">$29.99</span>
+                            <span class="rating">★★★★½ (342)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="clean innovative">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3');"></div>
+                    <div class="product-info">
+                        <span class="product-badge">SPF 30</span>
+                        <h3>Tinted Moisturizer</h3>
+                        <p>Laura Mercier</p>
+                        <div class="product-details">
+                            <span class="price">$48.00</span>
+                            <span class="rating">★★★★★ (892)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="looks" class="featured-looks">
+            <h2>Featured Looks</h2>
+            <div class="looks-filters">
+                <button class="filter-btn active" data-filter="all">All Looks</button>
+                <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+                <button class="filter-btn" data-filter="occasion">Occasion</button>
+                <button class="filter-btn" data-filter="celebrity">Celebrity</button>
+            </div>
+            <div class="looks-grid">
+                <article class="look-card" data-category="seasonal">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1503236823255-94609f598e71?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Summer 2024</span>
+                        <h3>Summer Glow</h3>
+                        <p>Achieve that perfect summer radiance with this natural glowing look</p>
+                        <div class="look-products">
+                            <span class="product-tag">Bronzer</span>
+                            <span class="product-tag">Highlighter</span>
+                            <span class="product-tag">Lip Gloss</span>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+                <article class="look-card" data-category="occasion">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1588464083059-8c94f14b8254?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Evening</span>
+                        <h3>Date Night Glam</h3>
+                        <p>Create a dramatic evening look with smokey eyes and nude lips</p>
+                        <div class="look-products">
+                            <span class="product-tag">Eyeshadow</span>
+                            <span class="product-tag">Eyeliner</span>
+                            <span class="product-tag">Nude Lipstick</span>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+                <article class="look-card" data-category="occasion">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Professional</span>
+                        <h3>Office Chic</h3>
+                        <p>Professional and polished look perfect for the workplace</p>
+                        <div class="look-products">
+                            <span class="product-tag">BB Cream</span>
+                            <span class="product-tag">Neutral Shadow</span>
+                            <span class="product-tag">Rose Lipstick</span>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+                <article class="look-card" data-category="celebrity">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Celebrity</span>
+                        <h3>Red Carpet Ready</h3>
+                        <p>Recreate this stunning award show makeup look</p>
+                        <div class="look-products">
+                            <span class="product-tag">Illuminator</span>
+                            <span class="product-tag">Red Lip</span>
+                            <span class="product-tag">False Lashes</span>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+                <article class="look-card" data-category="face">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Natural</span>
+                        <h3>Fresh Face Glow</h3>
+                        <p>Achieve a natural, dewy complexion with this minimalist look that enhances your features.</p>
+                        <div class="look-products">
+                            <span>Products Used:</span>
+                            <ul>
+                                <li>Tinted Moisturizer</li>
+                                <li>Cream Blush</li>
+                                <li>Clear Brow Gel</li>
+                                <li>Lip Oil</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+
+                <article class="look-card" data-category="night">
+                    <div class="look-image" style="background-image: url('https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3');"></div>
+                    <div class="look-info">
+                        <span class="look-badge">Glam</span>
+                        <h3>Sultry Night Out</h3>
+                        <p>A dramatic evening look featuring smokey eyes and glossy lips, perfect for special occasions.</p>
+                        <div class="look-products">
+                            <span>Products Used:</span>
+                            <ul>
+                                <li>Full Coverage Foundation</li>
+                                <li>Smokey Eye Palette</li>
+                                <li>False Lashes</li>
+                                <li>Metallic Highlighter</li>
+                            </ul>
+                        </div>
+                        <a href="#" class="tutorial-link">Watch Tutorial</a>
+                    </div>
+                </article>
+            </div>
+            <div class="community-section">
+                <h3>Share Your Look</h3>
+                <p>Join our community and share your makeup creations</p>
+                <button class="cta-button" id="uploadLook">Upload Your Look</button>
+            </div>
+        </section>
+
+        <section id="reviews" class="product-reviews">
+            <h2>Community Reviews</h2>
+            <div class="reviews-header">
+                <div class="reviews-summary">
+                    <div class="overall-rating">
+                        <span class="rating-number">4.8</span>
+                        <div class="rating-stars">★★★★★</div>
+                        <span class="total-reviews">Based on 1,248 reviews</span>
+                    </div>
+                    <div class="rating-breakdown">
+                        <div class="rating-bar">
+                            <span>5★</span>
+                            <div class="progress-bar"><div style="width: 75%"></div></div>
+                            <span>75%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>4★</span>
+                            <div class="progress-bar"><div style="width: 15%"></div></div>
+                            <span>15%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>3★</span>
+                            <div class="progress-bar"><div style="width: 7%"></div></div>
+                            <span>7%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>2★</span>
+                            <div class="progress-bar"><div style="width: 2%"></div></div>
+                            <span>2%</span>
+                        </div>
+                        <div class="rating-bar">
+                            <span>1★</span>
+                            <div class="progress-bar"><div style="width: 1%"></div></div>
+                            <span>1%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reviews-filters">
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select class="review-sort">
+                            <option value="helpful">Most Helpful</option>
+                            <option value="recent">Most Recent</option>
+                            <option value="high">Highest Rated</option>
+                            <option value="low">Lowest Rated</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Filter by:</label>
+                        <div class="filter-tags">
+                            <button class="filter-tag active">All</button>
+                            <button class="filter-tag">Verified Purchase</button>
+                            <button class="filter-tag">With Photos</button>
+                            <button class="filter-tag">With Videos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-grid">
+                <article class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3" alt="Reviewer" class="reviewer-avatar">
+                            <div class="reviewer-details">
+                                <h4>Sarah J.</h4>
+                                <span class="verified-badge">✓ Verified Purchase</span>
+                            </div>
+                        </div>
+                        <div class="review-meta">
+                            <div class="rating">★★★★★</div>
+                            <time>2 days ago</time>
+                        </div>
+                    </div>
+                    <div class="review-content">
+                        <h5>Perfect for everyday wear!</h5>
+                        <p>This foundation is absolutely amazing! It provides medium coverage that's buildable, and it feels so lightweight on the skin. Perfect for my combination skin type.</p>
+                        <div class="review-criteria">
+                            <div class="criteria-item">
+                                <span>Longevity</span>
+                                <div class="criteria-rating">★★★★★</div>
+                            </div>
+                            <div class="criteria-item">
+                                <span>Coverage</span>
+                                <div class="criteria-rating">★★★★☆</div>
+                            </div>
+                            <div class="criteria-item">
+                                <span>Value</span>
+                                <div class="criteria-rating">★★★★★</div>
+                            </div>
+                        </div>
+                        <div class="review-images">
+                            <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3" alt="Review image 1">
+                            <img src="https://images.unsplash.com/photo-1596704017234-0e70f8d4be56?ixlib=rb-4.0.3" alt="Review image 2">
+                        </div>
+                    </div>
+                    <div class="review-footer">
+                        <button class="helpful-btn">
+                            <span>Helpful (45)</span>
+                            <i class="thumbs-up-icon">👍</i>
+                        </button>
+                        <button class="report-btn">Report</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="reviews-pagination">
+                <button class="pagination-btn prev">Previous</button>
+                <div class="page-numbers">
+                    <button class="active">1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <span>...</span>
+                    <button>12</button>
+                </div>
+                <button class="pagination-btn next">Next</button>
+            </div>
+        </section>
+
+        <section id="virtual-tryon" class="virtual-tryon-section">
+            <h2>Virtual Try-On</h2>
+            <div class="tryon-container">
+                <div class="tryon-preview">
+                    <video id="webcam" autoplay playsinline></video>
+                    <canvas id="overlay"></canvas>
+                    <div class="tryon-controls">
+                        <button id="startCamera" class="control-btn">Start Camera</button>
+                        <button id="takePhoto" class="control-btn" disabled>Take Photo</button>
+                        <button id="uploadPhoto" class="control-btn">Upload Photo</button>
+                        <input type="file" id="photoUpload" accept="image/*" style="display: none;">
+                    </div>
+                </div>
+                <div class="product-selector">
+                    <h3>Select Product to Try On</h3>
+                    <div class="product-categories">
+                        <button class="category-btn active" data-category="lipstick">Lipstick</button>
+                        <button class="category-btn" data-category="foundation">Foundation</button>
+                        <button class="category-btn" data-category="blush">Blush</button>
+                        <button class="category-btn" data-category="eyeshadow">Eyeshadow</button>
+                    </div>
+                    <div class="product-grid">
+                        <div class="product-item" data-type="lipstick" data-color="#FF0000">
+                            <div class="color-swatch" style="background-color: #FF0000;"></div>
+                            <span>Classic Red</span>
+                        </div>
+                        <div class="product-item" data-type="lipstick" data-color="#FF69B4">
+                            <div class="color-swatch" style="background-color: #FF69B4;"></div>
+                            <span>Pink Rose</span>
+                        </div>
+                        <div class="product-item" data-type="foundation" data-color="#F5DEB3">
+                            <div class="color-swatch" style="background-color: #F5DEB3;"></div>
+                            <span>Natural Beige</span>
+                        </div>
+                        <!-- More product items will be dynamically added -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ingredients" class="ingredient-glossary">
+            <h2>Ingredient Glossary</h2>
+            <div class="glossary-container">
+                <div class="glossary-filters">
+                    <div class="view-toggle">
+                        <button class="toggle-btn active" data-view="benefits">By Benefits</button>
+                        <button class="toggle-btn" data-view="type">By Type</button>
+                    </div>
+                    <input type="search" class="ingredient-search" placeholder="Search ingredients...">
+                </div>
+                <div class="ingredients-grid" data-view="benefits">
+                    <div class="ingredient-category">
+                        <h3>Hydrating</h3>
+                        <div class="ingredient-list">
+                            <article class="ingredient-card">
+                                <h4>Hyaluronic Acid</h4>
+                                <p>A powerful humectant that can hold up to 1000x its weight in water.</p>
+                                <div class="ingredient-details">
+                                    <div class="benefits">
+                                        <h5>Benefits</h5>
+                                        <ul>
+                                            <li>Hydration</li>
+                                            <li>Plumping</li>
+                                            <li>Anti-aging</li>
+                                        </ul>
+                                    </div>
+                                    <div class="commonly-paired">
+                                        <h5>Commonly Paired With</h5>
+                                        <ul>
+                                            <li>Vitamin C</li>
+                                            <li>Peptides</li>
+                                            <li>Niacinamide</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- More ingredient cards will be dynamically added -->
+                        </div>
+                    </div>
+                    <div class="ingredient-category">
+                        <h3>Brightening</h3>
+                        <div class="ingredient-list">
+                            <article class="ingredient-card">
+                                <h4>Vitamin C</h4>
+                                <p>A potent antioxidant that helps brighten skin and boost collagen production.</p>
+                                <div class="ingredient-details">
+                                    <div class="benefits">
+                                        <h5>Benefits</h5>
+                                        <ul>
+                                            <li>Brightening</li>
+                                            <li>Antioxidant protection</li>
+                                            <li>Collagen boost</li>
+                                        </ul>
+                                    </div>
+                                    <div class="commonly-paired">
+                                        <h5>Commonly Paired With</h5>
+                                        <ul>
+                                            <li>Vitamin E</li>
+                                            <li>Ferulic Acid</li>
+                                            <li>Hyaluronic Acid</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- More ingredient cards will be dynamically added -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="personalization" class="personalization-quiz">
+            <h2>Find Your Perfect Products</h2>
+            <div class="quiz-container">
+                <div class="quiz-progress">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 0%"></div>
+                    </div>
+                    <span class="progress-text">Question 1 of 5</span>
+                </div>
+                <div class="quiz-content">
+                    <div class="quiz-question active" data-question="1">
+                        <h3>What's your skin type?</h3>
+                        <div class="options-grid">
+                            <button class="option-btn" data-value="dry">
+                                <img src="https://images.unsplash.com/photo-1596704017234-0e70f8d4be56?ixlib=rb-4.0.3" alt="Dry Skin">
+                                <span>Dry</span>
+                            </button>
+                            <button class="option-btn" data-value="oily">
+                                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?ixlib=rb-4.0.3" alt="Oily Skin">
+                                <span>Oily</span>
+                            </button>
+                            <button class="option-btn" data-value="combination">
+                                <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?ixlib=rb-4.0.3" alt="Combination Skin">
+                                <span>Combination</span>
+                            </button>
+                            <button class="option-btn" data-value="normal">
+                                <img src="https://images.unsplash.com/photo-1588464083059-8c94f14b8254?ixlib=rb-4.0.3" alt="Normal Skin">
+                                <span>Normal</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- More questions will be dynamically added -->
+                </div>
+                <div class="quiz-navigation">
+                    <button class="nav-btn prev" disabled>Previous</button>
+                    <button class="nav-btn next">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="sustainability" class="product-sustainability">
+            <h2>Our Commitment to Sustainability</h2>
+            <div class="sustainability-grid">
+                <div class="sustainability-card">
+                    <div class="icon">♻️</div>
+                    <h3>Packaging</h3>
+                    <div class="sustainability-score">
+                        <div class="score-bar">
+                            <div class="score" style="width: 85%"></div>
+                        </div>
+                        <span>85% Recyclable</span>
+                    </div>
+                    <p>Our packaging is made from recycled materials and is fully recyclable.</p>
+                    <div class="recycling-info">
+                        <h4>How to Recycle</h4>
+                        <ul>
+                            <li>Remove pump and cap</li>
+                            <li>Rinse container</li>
+                            <li>Check local recycling guidelines</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sustainability-card">
+                    <div class="icon">🌱</div>
+                    <h3>Ingredients</h3>
+                    <div class="sustainability-score">
+                        <div class="score-bar">
+                            <div class="score" style="width: 95%"></div>
+                        </div>
+                        <span>95% Natural</span>
+                    </div>
+                    <p>We use responsibly sourced, natural ingredients wherever possible.</p>
+                    <div class="sourcing-info">
+                        <h4>Our Sourcing</h4>
+                        <ul>
+                            <li>Fair Trade certified</li>
+                            <li>Organic farming</li>
+                            <li>Local suppliers</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="sustainability-card">
+                    <div class="icon">🐰</div>
+                    <h3>Animal Welfare</h3>
+                    <div class="certification-badges">
+                        <span class="badge" title="Cruelty Free">Cruelty Free</span>
+                        <span class="badge" title="Vegan">Vegan</span>
+                        <span class="badge" title="Leaping Bunny">Leaping Bunny</span>
+                    </div>
+                    <p>We never test on animals and maintain strict ethical standards.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About MakeupHub</h4>
+                <p>Your ultimate makeup directory for discovering and exploring beauty products. We help you find the perfect products for your unique style.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="#categories">Categories</a>
+                <a href="#trending">New Arrivals</a>
+                <a href="#looks">Trending Looks</a>
+                <a href="#">Beauty Tips</a>
+            </div>
+            <div class="footer-section">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">Pinterest</a>
+                    <a href="#" class="social-link">YouTube</a>
+                    <a href="#" class="social-link">TikTok</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe to get beauty tips and product updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 MakeupHub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

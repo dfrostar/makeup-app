@@ -1,0 +1,35 @@
+{
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "php.validate.executablePath": "php",
+        "php.suggest.basic": false,
+        "intelephense.environment.phpVersion": "7.4",
+        "intelephense.format.enable": false,
+        "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer",
+        "php-cs-fixer.lastDownload": 0,
+        "php-cs-fixer.config": ".php-cs-fixer.php",
+        "php-cs-fixer.onsave": true,
+        "editor.formatOnSave": true,
+        "[php]": {
+            "editor.defaultFormatter": "junstyle.php-cs-fixer"
+        },
+        "files.associations": {
+            "*.php": "php"
+        },
+        "emmet.includeLanguages": {
+            "php": "html"
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "bmewburn.vscode-intelephense-client",
+            "junstyle.php-cs-fixer",
+            "felixfbecker.php-debug",
+            "sonarsource.sonarlint-vscode"
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Makeup products collection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "price": {
+      "type": "decimal",
+      "required": true
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category",
+      "inversedBy": "products"
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false
+    },
+    "ingredients": {
+      "type": "text"
+    },
+    "shades": {
+      "type": "json"
+    },
+    "rating": {
+      "type": "decimal",
+      "min": 0,
+      "max": 5
+    },
+    "inStock": {
+      "type": "boolean",
+      "default": true
+    },
+    "tags": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,91 @@
+name: Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'src/**/*.ts'
+      - 'src/**/*.tsx'
+      - '.github/workflows/documentation.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'docs/**'
+      - 'src/**/*.ts'
+      - 'src/**/*.tsx'
+      - '.github/workflows/documentation.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Check for broken links
+      run: npm run test:links
+
+    - name: Lint markdown
+      run: npm run test:markdown
+
+    - name: Validate code examples
+      run: npm run validate:examples
+
+    - name: Build documentation
+      run: npm run docs:build
+
+    - name: Optimize images
+      run: npm run optimize:images
+
+    - name: Validate HTML
+      run: npm run validate:html
+
+    - name: Generate search index
+      run: npm run generate:search-index
+
+    - name: Create documentation version
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        VERSION=$(node -p "require('./package.json').version")
+        cp -r docs/dist "docs/versions/v${VERSION}"
+
+    - name: Deploy to GitHub Pages
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs/dist
+        keep_files: true
+
+  notify:
+    needs: build
+    runs-on: ubuntu-latest
+    if: failure()
+
+    steps:
+    - name: Notify on failure
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const { repo, owner } = context.repo;
+          const run_id = context.runId;
+          const run_url = `https://github.com/${owner}/${repo}/actions/runs/${run_id}`;
+          
+          await github.rest.issues.create({
+            owner,
+            repo,
+            title: 'Documentation build failed',
+            body: `The documentation build failed. [View details](${run_url})`
+          });

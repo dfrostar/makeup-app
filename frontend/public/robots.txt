@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /checkout/
+Disallow: /user/
+Disallow: /cart/
+
+# Allow product pages
+Allow: /products/
+Allow: /categories/
+Allow: /looks/
+Allow: /tutorials/
+
+# Sitemaps
+Sitemap: https://makeupdir.com/sitemap.xml

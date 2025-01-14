@@ -1,0 +1,32 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./frontend"],
+  "entryPointStrategy": "expand",
+  "out": "docs/api",
+  "plugin": ["typedoc-plugin-markdown"],
+  "theme": "markdown",
+  "readme": "none",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "excludeInternal": true,
+  "categorizeByGroup": true,
+  "categoryOrder": [
+    "Components",
+    "Hooks",
+    "Utils",
+    "Types",
+    "Services",
+    "Constants",
+    "*"
+  ],
+  "sort": ["source-order"],
+  "cleanOutputDir": true,
+  "gitRevision": "main",
+  "hideGenerator": true,
+  "searchInComments": true,
+  "validation": {
+    "invalidLink": true,
+    "notDocumented": true
+  }
+}

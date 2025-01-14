@@ -1,0 +1,25 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "MakeupHub Virtual Try-On",
+  "applicationCategory": "BeautyApplication",
+  "operatingSystem": "Web Browser",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Real-time makeup application",
+    "Multiple product categories",
+    "Shade matching",
+    "Look saving capability",
+    "Social sharing"
+  ],
+  "screenshot": "{{screenshotUrl}}",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{averageRating}}",
+    "ratingCount": "{{numberOfRatings}}"
+  }
+}

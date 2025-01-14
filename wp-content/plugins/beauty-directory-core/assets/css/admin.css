@@ -1,0 +1,228 @@
+/* Beauty Directory Admin Styles */
+
+/* Dashboard Layout */
+.beauty-directory-admin .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.beauty-directory-admin .stat-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.beauty-directory-admin .stat-card h3 {
+    margin: 0 0 10px;
+    color: #23282d;
+    font-size: 14px;
+}
+
+.beauty-directory-admin .stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2271b1;
+    margin-bottom: 5px;
+}
+
+.beauty-directory-admin .stat-meta {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Charts */
+.beauty-directory-admin .dashboard-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.beauty-directory-admin .chart-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.beauty-directory-admin .chart-container h2 {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+/* Tables */
+.beauty-directory-admin .dashboard-tables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.beauty-directory-admin .table-container {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.beauty-directory-admin .table-container h2 {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+/* Status Badges */
+.beauty-directory-admin .status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.beauty-directory-admin .status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.beauty-directory-admin .status-verified {
+    background: #d4edda;
+    color: #155724;
+}
+
+.beauty-directory-admin .status-suspended {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+.beauty-directory-admin .status-completed {
+    background: #d4edda;
+    color: #155724;
+}
+
+.beauty-directory-admin .status-cancelled {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Ratings */
+.beauty-directory-admin .rating {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.beauty-directory-admin .rating-count {
+    color: #666;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Modal */
+.beauty-directory-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.beauty-directory-modal .modal-content {
+    background: #fff;
+    padding: 30px;
+    border-radius: 4px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.beauty-directory-modal .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.beauty-directory-modal h2 {
+    margin: 0 0 20px;
+    padding-right: 30px;
+}
+
+.beauty-directory-modal .detail-row {
+    margin-bottom: 15px;
+}
+
+.beauty-directory-modal .detail-row label {
+    font-weight: 600;
+    display: inline-block;
+    width: 100px;
+}
+
+/* Forms */
+.beauty-directory-admin .search-box {
+    float: right;
+    margin-bottom: 10px;
+}
+
+.beauty-directory-admin .search-box input[type="search"] {
+    width: 200px;
+    margin-right: 5px;
+}
+
+/* Pagination */
+.beauty-directory-admin .tablenav-pages {
+    float: right;
+    margin: 15px 0;
+}
+
+.beauty-directory-admin .tablenav-pages a,
+.beauty-directory-admin .tablenav-pages span {
+    display: inline-block;
+    padding: 4px 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0 2px;
+    text-decoration: none;
+    color: #2271b1;
+}
+
+.beauty-directory-admin .tablenav-pages .current {
+    background: #2271b1;
+    color: #fff;
+    border-color: #2271b1;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .beauty-directory-admin .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beauty-directory-admin .dashboard-charts,
+    .beauty-directory-admin .dashboard-tables {
+        grid-template-columns: 1fr;
+    }
+
+    .beauty-directory-admin .search-box {
+        float: none;
+        margin-bottom: 15px;
+    }
+
+    .beauty-directory-admin .search-box input[type="search"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

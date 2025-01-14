@@ -1,0 +1,45 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "HowTo",
+  "name": "{{tutorialTitle}}",
+  "description": "{{tutorialDescription}}",
+  "image": "{{tutorialImage}}",
+  "totalTime": "{{duration}}",
+  "estimatedCost": {
+    "@type": "MonetaryAmount",
+    "currency": "USD",
+    "value": "{{estimatedCost}}"
+  },
+  "supply": [
+    {{#each products}}
+    {
+      "@type": "HowToSupply",
+      "name": "{{name}}"
+    }
+    {{/each}}
+  ],
+  "tool": [
+    {{#each tools}}
+    {
+      "@type": "HowToTool",
+      "name": "{{name}}"
+    }
+    {{/each}}
+  ],
+  "step": [
+    {{#each steps}}
+    {
+      "@type": "HowToStep",
+      "name": "{{name}}",
+      "text": "{{instructions}}",
+      "image": "{{stepImage}}",
+      "url": "{{stepUrl}}"
+    }
+    {{/each}}
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "{{authorName}}",
+    "url": "{{authorUrl}}"
+  }
+}

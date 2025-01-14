@@ -1,0 +1,90 @@
+/* Fluid Animations */
+@keyframes fluid-rotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@keyframes fluid-morph {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fluid-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 128, 128, 0.3),
+    rgba(255, 192, 203, 0.3),
+    rgba(255, 182, 193, 0.3),
+    rgba(255, 218, 185, 0.3)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+  filter: blur(50px);
+}
+
+.fluid-shape {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 69, 0, 0.2),
+    rgba(255, 140, 0, 0.2),
+    rgba(255, 192, 203, 0.2)
+  );
+  animation: fluid-morph 15s ease-in-out infinite,
+             fluid-rotate 20s linear infinite;
+  filter: blur(30px);
+}
+
+.fluid-shape:nth-child(2) {
+  top: 20%;
+  right: 20%;
+  animation-delay: -5s;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 192, 203, 0.2),
+    rgba(255, 218, 185, 0.2),
+    rgba(255, 140, 0, 0.2)
+  );
+}
+
+.fluid-shape:nth-child(3) {
+  bottom: 20%;
+  left: 30%;
+  animation-delay: -10s;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 218, 185, 0.2),
+    rgba(255, 69, 0, 0.2),
+    rgba(255, 192, 203, 0.2)
+  );
+}
