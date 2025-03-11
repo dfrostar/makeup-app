@@ -1,0 +1,16 @@
+Date Handling in Tests:
+Always use explicit dates in tests rather than relying on current time
+Mock dates consistently across test cases
+Keep date mocking simple - avoid complex date manipulation in mocks
+Animation Style Testing:
+Focus on testing the mapping between holidays and their expected animation styles
+Keep holiday mocks simple - use isHolidayActive to return true rather than complex date logic
+Ensure each holiday test case has clear, documented expectations
+Test Organization:
+Keep test cases focused and isolated
+Clean up mocks after each test
+Use descriptive test names that reflect the specific behavior being tested
+update the readme file with new features developed
+update admin.md file with how to use the new features and ai agents created
+please review the documentation starting with the PROJECT_DOCUMENTION_GUIDE.md file to ensure we are aligned with the goals and objectives and the ROADMAP.md file for updates
+always ask questions when performing updates to ensure staying aligned with the goals and objectives

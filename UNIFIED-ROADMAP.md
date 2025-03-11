@@ -1,18 +1,29 @@
-# Makeup Discovery Platform - Unified Vision & Roadmap
+# UNIFIED ROADMAP: BEAUTY DIRECTORY PLATFORM
 
-## Platform Overview
-A visual discovery platform connecting users with makeup looks, techniques, products, and professionals through a Pinterest-like interface, enhanced with AI and AR capabilities.
+## VISION STATEMENT
 
-## Core Objectives
-- Connect users to desired makeup styles and techniques
-- Provide curated paths to achieve specific looks
-- Integrate product recommendations and professional services
-- Leverage AI for personalization and trend prediction
-- Generate revenue through affiliate marketing, professional listings, and sponsored content
+To create the leading AI-powered beauty platform that connects consumers with products, professionals, and personalized recommendations, while providing beauty professionals with powerful tools to manage their business and clientele.
 
-## Phase 1: Foundation (Q1 2024)
+## STRATEGIC OBJECTIVES
 
-### Visual Discovery System
+1. **Reach $5,000 MRR within 12 months** through a combination of directory listings, premium features, and affiliate revenue
+2. **Build a cohesive product experience** that seamlessly combines directory, task management, and AI recommendations
+3. **Establish technical excellence** through a consolidated, maintainable codebase
+4. **Achieve product-market fit** with beauty professionals and beauty enthusiasts
+
+## CONSOLIDATION PRINCIPLES
+
+1. **Simplicity over complexity**: Choose the simplest solution that meets requirements
+2. **Consistency over variety**: Standardize technology choices across the platform
+3. **Focus over expansion**: Prioritize core features over new capabilities
+4. **Testability over speed**: Ensure all code is testable and maintainable
+5. **User value over technical elegance**: Prioritize features that deliver clear user value
+
+---
+
+## EXISTING FEATURE SET OVERVIEW
+
+### Visual Discovery System (Implemented)
 - [x] Pinterest-style discovery interface
 - [x] Advanced categorization system
   - Everyday Looks (Natural, Professional, Quick & Easy)
@@ -26,363 +37,356 @@ A visual discovery platform connecting users with makeup looks, techniques, prod
   - Style preferences (difficulty, time required)
   - Product preferences (budget, brands)
 
-### Content Aggregation & Curation
+### Content Aggregation & Curation (Implemented)
 - [x] AI-powered content aggregation from:
   - Instagram
   - YouTube
   - TikTok
   - Pinterest
 - [x] Monthly content refresh system
-- [x] Quality control AI agent for:
-  - Product mention verification
-  - Technique accuracy assessment
-  - Tutorial quality rating
+- [x] Quality control AI agent
 - [x] Trending looks analysis
 
-### User Features
+### Basic User Features (Implemented)
 - [x] User collections/boards
 - [x] Look sharing capabilities
 - [x] Personalized recommendations
 - [x] Progress tracking placeholder
-- [x] Email/SMS notifications for:
-  - Saved looks
-  - Deal alerts
-  - New content in followed categories
+- [x] Email/SMS notifications
 
-## Phase 2: Enhanced Features (Q2 2024)
+### AR Features (Partial Implementation)
+- [x] Core face detection
+- [ ] Virtual makeup application
+- [ ] Real-time face mapping
+- [ ] Interactive AR tutorials
+- [ ] Expression and pose detection
 
-### AI & AR Integration
-- [ ] Core AR Infrastructure
-  - Real-time face mapping and mesh generation
-  - Multiple face detection support
-  - Face tracking stabilization
-  - Smooth mesh transition system
-  - Enhanced vertex normal calculations
-  - Performance optimization modes (low, medium, high)
-  - WebGL resource management and cleanup
-  - Comprehensive error handling system
-  - Debug logging infrastructure
-  - Complete TypeScript definitions
-  - Unit testing framework for AR components
+### Task Management System (Initial Implementation)
+- [x] Basic task creation from natural language
+- [x] Task listing UI
+- [x] Task categorization by beauty types
+- [x] Persistent task storage
+- [x] Enhanced date handling and validation
+- [x] User onboarding and beauty profile creation
+- [x] Category introduction flow
+- [x] Guided first task creation
+- [ ] AI-powered task prioritization
+- [ ] Integration with beauty routines
 
-- [ ] Neural Network Integration
-  - TensorFlow.js integration with WebGL backend
-  - Model optimization and quantization
-  - GPU acceleration and power management
-  - Batch processing and tensor caching
-  - Progressive model loading
-  - WebAssembly acceleration support
-  - Multi-threading optimization
+---
 
-- [ ] Advanced Skin Analysis
-  - Real-time skin tone detection
-  - Undertone analysis (warm/cool/neutral)
-  - Regional skin type mapping
-    * T-Zone analysis
-    * Cheek analysis
-    * Chin analysis
-  - Texture analysis
-    * Pore detection
-    * Spot identification
-    * Smoothness measurement
-  - Dynamic lighting adaptation
-    * Color temperature detection
-    * Intensity measurement
-    * Direction mapping
-    * Quality assessment
+## PHASE 1: FOUNDATION CONSOLIDATION (WEEKS 1-4)
 
-- [ ] Expression and Pose Detection
-  - Real-time expression recognition
-    * Base expression classification
-    * Intensity measurement
-    * Asymmetry detection
-  - Precise face pose tracking
-    * Rotation (pitch/yaw/roll)
-    * Translation tracking
-    * Stability monitoring
-  - Occlusion detection
-    * Eye region tracking
-    * Nose coverage detection
-    * Mouth visibility
-    * Chin tracking
+### Technical Stack Standardization
 
-- [ ] Enhanced Virtual Try-on
-  - Product-specific rendering
-    * Foundation with skin adaptation
-    * Concealer with spot detection
-    * Blush with expression awareness
-    * Eyeshadow with depth mapping
-    * Lipstick with texture variation
-  - Environmental adaptation
-    * Lighting compensation
-    * Color correction
-    * Shadow adjustment
-  - Real-time performance optimization
-    * Quality scaling
-    * Frame rate optimization
-    * Memory management
-  - Multi-product layering
-    * Layer composition
-    * Blend mode optimization
-    * Opacity control
-    * Effect stacking
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 1 | Review and decide on final tech stack | Tech stack decision document | Tech Lead |
+| 1 | Create consolidated directory structure | Restructured repository | Backend Dev |
+| 1-2 | Standardize on Next.js for frontend | Migration plan and initial implementation | Frontend Dev |
+| 2 | Consolidate to single backend (Node.js/Express) | Consolidated API routes | Backend Dev |
+| 2-3 | Implement PostgreSQL with Prisma | Database schema and migrations | Database Engineer |
+| 3 | Set up unified authentication system | Authentication service with Google OAuth | Security Engineer |
+| 3-4 | Configure CI/CD pipeline | GitHub Actions workflow | DevOps |
 
-### Professional Integration
-- [ ] Professional verification system
-  - Portfolio review
-  - Certification verification
-  - Experience validation
-  - Social media presence analysis
-- [ ] Professional profiles
-  - Before/After galleries
-  - Specialization badges
-  - Price ranges
-  - Service areas
-- [ ] Booking system placeholder
-- [ ] Rating and review system
+### Codebase Cleanup
 
-### Product Integration
-- [ ] Affiliate system implementation
-  - High-end makeup brands
-  - Drugstore brands
-  - Professional tools
-  - Skincare products
-- [ ] Price comparison engine
-- [ ] Multi-source review aggregation
-- [ ] Deal alert system
-- [ ] Future inventory tracking system
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 1 | Audit existing features and code | Feature inventory document | Tech Lead |
+| 2 | Remove redundant code and dependencies | Cleaned codebase | All Devs |
+| 2-3 | Standardize TypeScript usage across codebase | Type definitions and consistent typing | Frontend Dev |
+| 3 | Implement consistent error handling | Error handling utilities | Backend Dev |
+| 4 | Set up logging and monitoring | Sentry integration | DevOps |
 
-### Enhanced Search & Discovery
-- [ ] Voice Search Integration
-  - Natural language query processing
-  - Voice command recognition
-  - Multi-language support
-  - Accent adaptation
-  - Voice feedback system
+### Product Definition
 
-- [ ] Visual Search
-  - Image-based product search
-  - Look matching algorithm
-  - Style transfer search
-  - Color palette extraction
-  - Real-time camera search
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 1 | Define core user personas | User persona document | Product Manager |
+| 1-2 | Outline feature set for MVP | Feature specification | Product Manager |
+| 2 | Design user journeys | User flow diagrams | UX Designer |
+| 3-4 | Create wireframes for consolidated experience | Wireframe prototypes | UI Designer |
+| 4 | Develop consolidated branding | Brand guidelines | Brand Designer |
 
-- [ ] AI-Powered Recommendations
-  - Skin analysis-based suggestions
-  - Style preference learning
-  - Seasonal trend adaptation
-  - Personalized color recommendations
-  - Look completion suggestions
+---
 
-### Advanced User Experience
-- [ ] Interactive Tutorials
-  - First-time user guidance
-  - Step-by-step makeup application
-  - Face shape-based tips
-  - Product-specific tutorials
-  - Technique demonstrations
+## PHASE 2: CORE FEATURE IMPLEMENTATION (WEEKS 5-12)
 
-- [ ] Virtual Makeup Assistant
-  - Real-time application guidance
-  - Personalized recommendations
-  - Progress tracking
-  - Technique correction
-  - Voice-guided instructions
+### Directory Foundation
 
-- [ ] Gesture Controls
-  - Product selection gestures
-  - Color adjustment gestures
-  - Intensity control
-  - View manipulation
-  - Custom gesture creation
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 5-6 | Implement business listing database model | Database schema | Backend Dev |
+| 5-6 | Create business profile pages | Profile page components | Frontend Dev |
+| 7 | Develop search functionality | Search API and UI | Full-stack Dev |
+| 7-8 | Build category browsing experience | Category pages | Frontend Dev |
+| 8-9 | Implement review and rating system | Review components and API | Full-stack Dev |
+| 9-10 | Add geolocation-based discovery | Location services | Backend Dev |
 
-- [ ] Haptic Feedback
-  - Product selection feedback
-  - Application pressure sensing
-  - Error notification
-  - Success confirmation
-  - Tutorial guidance
+### Task Management Integration
 
-### Enhanced AR Features
-- [ ] Lighting Optimization
-  - Auto light compensation
-  - Color temperature adjustment
-  - Shadow detection
-  - Reflection handling
-  - HDR support
+| Week | Tasks | Deliverables | Owner | Status |
+|------|-------|-------------|-------|--------|
+| 6-7 | Refine AI task detection system | NLP service integration | AI Engineer | Pending |
+| 7-8 | Develop task creation and management UI | Task management components | Frontend Dev | Completed |
+| 7-8 | Implement beauty-specific task categories | Category system | Frontend Dev | Completed |
+| 8-9 | Add persistent storage for tasks | File-based storage | Backend Dev | Completed |
+| 8-9 | Design and implement user onboarding | Onboarding journey components | UX Designer | Completed |
+| 9-10 | Create beauty profile system | Profile data storage | Full-stack Dev | Completed |
+| 8-9 | Implement task prioritization | ML-based prioritization service | AI Engineer | Pending |
+| 9-10 | Build scheduling functionality | Calendar integration | Full-stack Dev | Pending |
+| 10-11 | Create notification system | Push notifications | Backend Dev | Pending |
+| 11-12 | Integrate real-time updates with Pusher | Real-time functionality | Full-stack Dev | Pending |
 
-- [ ] Split-Screen Comparisons
-  - Before/after views
-  - Side-by-side comparison
-  - Multiple look comparison
-  - Time-lapse recording
-  - Progress tracking
+### AI Features Development
 
-- [ ] Social Features
-  - AR filter sharing
-  - Look sharing
-  - Tutorial creation
-  - Community challenges
-  - Live AR sessions
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 5-7 | Develop virtual try-on prototype | Face detection integration | ML Engineer |
+| 7-9 | Implement product recommendation engine | Recommendation algorithms | AI Engineer |
+| 9-11 | Create personalized content delivery | Content personalization service | Backend Dev |
+| 11-12 | Build AI chatbot for user assistance | Chatbot integration | AI Engineer |
 
-### Accessibility Improvements
-- [ ] Voice Navigation
-  - Complete voice control
-  - Screen reader optimization
-  - Voice feedback
-  - Audio descriptions
-  - Voice shortcuts
+---
 
-- [ ] Low-End Device Support
-  - Performance optimization
-  - Quality scaling
-  - Offline capabilities
-  - Battery optimization
-  - Reduced bandwidth mode
+## PHASE 3: MONETIZATION & USER ACQUISITION (WEEKS 13-20)
 
-- [ ] Enhanced Feedback
-  - Haptic responses
-  - Audio cues
-  - Visual indicators
-  - Progress notifications
-  - Error explanations
+### Monetization Implementation
 
-## Phase 3: Social & Commerce (Q3 2024)
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 13-14 | Design and implement subscription tiers | Subscription system | Full-stack Dev |
+| 14-15 | Develop premium listing features | Enhanced business profiles | Full-stack Dev |
+| 15-16 | Implement payment processing | Stripe integration | Backend Dev |
+| 16-17 | Create affiliate link system | Affiliate tracking | Backend Dev |
+| 17-18 | Build analytics dashboard for businesses | Business dashboard | Frontend Dev |
 
-### Enhanced AR Features
-- [ ] Style Transfer Integration
-  - Complete look replication
-  - Style adaptation to user features
-  - Real-time style mixing
-  - Custom style creation
+### User Acquisition Strategy
 
-- [ ] Advanced User Interaction
-  - Voice command system
-    * Product selection
-    * Color adjustment
-    * Effect control
-    * Look saving
-  - Gesture control interface
-    * Touch-free interaction
-    * Precision control
-    * Custom gestures
-  - Social AR features
-    * Live AR filters
-    * Look sharing
-    * Collaborative sessions
-    * Community challenges
+| Week | Tasks | Deliverables | Owner |
+|------|-------|-------------|-------|
+| 13-14 | Implement SEO optimizations | SEO strategy and implementation | SEO Specialist |
+| 14-16 | Develop content marketing plan | Content calendar | Marketing Manager |
+| 16-17 | Create referral program | Referral system | Full-stack Dev |
+| 17-19 | Build email marketing automation | Email sequences | Marketing Engineer |
+| 19-20 | Implement social sharing features | Social integration | Frontend Dev |
 
-- [ ] Professional AR Tools
-  - Virtual consultation features
-    * Live AR demonstrations
-    * Remote makeup application
-    * Real-time adjustments
-    * Look documentation
-  - Professional calibration
-    * Color accuracy tools
-    * Lighting standardization
-    * Product matching
-    * Look verification
+---
 
-### Social Commerce
-- [ ] TikTok Shop API integration
-- [ ] Instagram Shopping Tags
-- [ ] Live shopping features
-- [ ] Social sharing enhancements
-- [ ] AR social features
-- [ ] Enhanced AR Shopping Features
+## PHASE 4: SCALING & OPTIMIZATION (MONTHS 6-12)
+
+### Performance Optimization
+
+| Month | Tasks | Deliverables | Owner |
+|-------|-------|-------------|-------|
+| 6 | Conduct performance audit | Performance report | DevOps |
+| 6-7 | Implement image optimization | Image processing pipeline | Frontend Dev |
+| 7 | Optimize database queries | Query optimization | Database Engineer |
+| 7-8 | Implement caching strategy | Redis caching | Backend Dev |
+| 8 | Conduct load testing | Load testing report | QA Engineer |
+
+### Feature Expansion
+
+| Month | Tasks | Deliverables | Owner |
+|-------|-------|-------------|-------|
+| 8-9 | Develop mobile app | React Native application | Mobile Dev |
+| 9-10 | Implement advanced analytics | Analytics dashboard | Data Engineer |
+| 10-11 | Create API for third-party integrations | Public API | Backend Dev |
+| 11-12 | Develop marketplace functionality | Marketplace MVP | Full-stack Dev |
+
+### Enhanced AR Features (From Original Roadmap)
+
+| Month | Tasks | Deliverables | Owner |
+|-------|-------|-------------|-------|
+| 8-9 | Style Transfer Integration | AR style transfer module | ML Engineer |
+| 9-10 | Advanced User Interaction | Voice + gesture controls | Full-stack Dev |
+| 10-12 | Professional AR Tools | Virtual consultation features | ML Engineer |
+
+### Business Growth
+
+| Month | Tasks | Deliverables | Owner |
+|-------|-------|-------------|-------|
+| 6-7 | Implement customer success systems | Support platform | Customer Success |
+| 7-8 | Develop partner program | Partner onboarding | Business Dev |
+| 8-10 | Create enterprise offering | Enterprise features | Product Manager |
+| 10-12 | Explore international expansion | Localization features | Product Manager |
+
+---
+
+## FUTURE FEATURE ROADMAP (BEYOND YEAR 1)
+
+### Social Commerce Features
+- TikTok Shop API integration
+- Instagram Shopping Tags
+- Live shopping features
+- Enhanced AR Shopping Features
   - Virtual shade matching
   - Product try-before-buy
-  - AR-powered product recommendations
-  - Live AR product demonstrations
-  - Custom look creation tools
+  - AR product recommendations
 
 ### Sustainability Features
-- [ ] Product certification badges
-  - Cruelty-free
-  - Sustainable packaging
-  - Clean beauty
-  - Vegan formulation
-- [ ] Ethical brand directory
-- [ ] Sustainable product alternatives
+- Product certification badges
+- Ethical brand directory
+- Sustainable product alternatives
 
-### Content Enhancements
-- [ ] Short-form video integration
-- [ ] Interactive tutorials
-- [ ] Live virtual consultations
-- [ ] Seasonal content calendars
-- [ ] Trending looks automation
+### Professional Integration
+- Client management system
+- Digital consultation forms
+- Portfolio builder
+- Appointment scheduling
+- Professional analytics
 
-## Phase 4: Advanced Features (Q4 2024)
+### Advanced Neural Features
+- Aging simulation with makeup
+- Skin condition prediction
+- Personal style evolution
+- Trend adaptation
+- Look recommendation engine
 
-### AI & AR Enhancements
-- [ ] Advanced Neural Features
-  - Aging simulation with makeup
-  - Skin condition prediction
-  - Personal style evolution
-  - Trend adaptation
-  - Look recommendation engine
+---
 
-- [ ] Performance Optimization
-  - Hardware acceleration
-    * Multi-GPU support
-    * CPU optimization
-    * Memory management
-    * Battery efficiency
-  - Quality Enhancement
-    * Super-resolution
-    * Anti-aliasing
-    * HDR support
-    * Color calibration
+## KEY SUCCESS METRICS
 
-- [ ] Extended Reality Features
-  - VR makeup application
-  - Mixed reality tutorials
-  - Spatial makeup mapping
-  - 3D look visualization
+### Technical Metrics
 
-### Professional Tools
-- [ ] Client management system
-- [ ] Digital consultation forms
-- [ ] Portfolio builder
-- [ ] Appointment scheduling
-- [ ] Professional analytics
+- **Code coverage**: Minimum 80% test coverage
+- **Performance**: < 3s page load time on mobile devices
+- **Reliability**: 99.9% uptime
+- **API response time**: < 200ms average
 
-### User Experience
-- [ ] Progress tracking implementation
-- [ ] Achievement system
-- [ ] Community features
-- [ ] Look challenges
-- [ ] User-generated content integration
+### Product Metrics
 
-## Revenue Streams
-1. Affiliate Marketing
+- **User engagement**: 5+ minutes average session duration
+- **Retention**: 40%+ 30-day retention rate
+- **Task completion**: 80%+ task completion rate
+- **Virtual try-on usage**: 30%+ of users trying the feature
+
+### Business Metrics
+
+- **Revenue**: $5,000 MRR by month 12
+- **Listings**: 500+ business listings in first 6 months
+- **Conversion**: 5%+ free-to-premium conversion rate
+- **CAC**: < $50 customer acquisition cost
+- **LTV**: > $200 lifetime value for premium users
+
+---
+
+## QUARTERLY REVIEWS & ADJUSTMENTS
+
+### Q1 Review (Month 3)
+- Assess technical foundation
+- Validate product direction with user testing
+- Adjust feature priorities based on feedback
+
+### Q2 Review (Month 6)
+- Evaluate early monetization results
+- Assess user acquisition channels
+- Refine product roadmap for second half of year
+
+### Q3 Review (Month 9)
+- Review scaling challenges
+- Evaluate expansion opportunities
+- Adjust growth strategy based on performance
+
+### Q4 Review (Month 12)
+- Comprehensive business review
+- Define strategy for year 2
+- Establish growth targets for next 12 months
+
+---
+
+## REVENUE STREAMS
+
+1. **Directory Listings**
+   - Premium business profiles
+   - Featured placement
+   - Enhanced visibility
+
+2. **Task Management Premium Features**
+   - Advanced AI recommendations
+   - Business workflow integration
+   - Team collaboration features
+
+3. **Affiliate Marketing**
    - Product recommendations
    - Tutorial products
    - Professional tools
-2. Professional Listings
-   - Premium profiles
-   - Featured placement
-   - Enhanced visibility
-3. Sponsored Content
+
+4. **Sponsored Content**
    - Brand partnerships
    - Featured looks
    - Sponsored tutorials
 
-## Success Metrics
-- Monthly Active Users (MAU)
-- User Engagement Rates
-- Conversion Rates
-- Affiliate Revenue
-- Professional Subscriptions
-- Content Freshness
-- User Satisfaction Scores
+---
 
-## Technical Infrastructure
-- Next.js frontend
-- PHP/Python backend
-- AI/ML processing pipeline
-- Content aggregation system
-- AR processing engine
-- Analytics and tracking
-- Security and privacy controls
+## DEPENDENCY MANAGEMENT
+
+1. **Critical Dependencies**
+   - PostgreSQL database implementation must precede feature development
+   - Authentication system required before user-specific features
+   - AI model training required before recommendation engine deployment
+
+2. **Risk Mitigation**
+   - Maintain weekly backups of all data
+   - Implement feature flags for gradual rollout
+   - Conduct security reviews before major releases
+
+3. **Resource Allocation**
+   - Frontend: 2-3 developers
+   - Backend: 2 developers
+   - AI/ML: 1-2 specialists
+   - Design: 1 UX/UI designer
+   - Product: 1 product manager
+   - DevOps: 1 engineer (part-time)
+
+---
+
+## APPENDIX: CONSOLIDATION DECISIONS
+
+### A. Technology Choices
+
+| Area | Decision | Rationale |
+|------|----------|-----------|
+| Frontend Framework | Next.js | SEO benefits, server-side rendering, API routes |
+| Styling | Tailwind CSS | Rapid development, consistent design system |
+| State Management | React hooks + Context | Simplicity, built-in to React |
+| Backend | Node.js/Express | JavaScript ecosystem consistency |
+| Database | PostgreSQL | Relational structure with JSON support |
+| ORM | Prisma | Type safety, migrations, developer experience |
+| Authentication | NextAuth.js | Easy integration with Next.js |
+| Real-time | Pusher | Simplicity, scalability for notifications |
+| AI/ML | TensorFlow.js + custom models | Browser compatibility, performance |
+| Hosting | Vercel (frontend), AWS (backend) | Optimized for Next.js, scalability |
+
+### B. Feature Prioritization Framework
+
+| Priority | Criteria | Examples |
+|----------|----------|----------|
+| P0 (Critical) | Core to user value proposition | Search, profiles, task creation |
+| P1 (High) | Strong impact on user experience | Reviews, recommendations |
+| P2 (Medium) | Enhances core functionality | Filtering, sorting, categories |
+| P3 (Low) | Nice-to-have features | Advanced analytics, integrations |
+| P4 (Future) | Research or long-term vision | AR experiences, marketplace |
+
+### C. Consolidated Directory Structure
+
+```
+/app                      # Next.js app directory
+  /api                    # API routes
+  /components             # UI components
+  /hooks                  # React hooks
+  /lib                    # Utility functions
+  /models                 # Type definitions
+  /services               # External service integrations
+  /styles                 # Global styles
+  /types                  # TypeScript types
+  /utils                  # Helper functions
+/docs                     # Documentation
+/prisma                   # Database schema and migrations
+/public                   # Static assets
+/scripts                  # Build and utility scripts
+/tests                    # Test files
+```
+
+This roadmap serves as a living document and will be reviewed and updated on a monthly basis to ensure it reflects current priorities and learnings. It combines our existing beauty platform features with the new task management capabilities in a cohesive, unified product experience.

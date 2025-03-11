@@ -174,6 +174,14 @@ describe('Background Themes', () => {
     });
   });
 
+  describe('Timezone handling', () => {
+    test('recognizes Christmas across timezones', () => {
+      const utcDate = new Date('2024-12-25T12:00:00Z');
+      const tokyoDate = new Date(utcDate.toLocaleString('en-US', { timeZone: 'Asia/Tokyo' }));
+      expect(isHolidayActive(tokyoDate, mockHolidays[0])).toBe(true);
+    });
+  });
+
   describe('Color Schemes', () => {
     test('all color schemes have valid RGBA values', () => {
       Object.values(culturalColorSchemes).forEach(scheme => {

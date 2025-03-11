@@ -1,35 +1,29 @@
 {
-    "folders": [
-        {
-            "path": "."
-        }
-    ],
-    "settings": {
-        "php.validate.executablePath": "php",
-        "php.suggest.basic": false,
-        "intelephense.environment.phpVersion": "7.4",
-        "intelephense.format.enable": false,
-        "php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer",
-        "php-cs-fixer.lastDownload": 0,
-        "php-cs-fixer.config": ".php-cs-fixer.php",
-        "php-cs-fixer.onsave": true,
-        "editor.formatOnSave": true,
-        "[php]": {
-            "editor.defaultFormatter": "junstyle.php-cs-fixer"
-        },
-        "files.associations": {
-            "*.php": "php"
-        },
-        "emmet.includeLanguages": {
-            "php": "html"
-        }
-    },
-    "extensions": {
-        "recommendations": [
-            "bmewburn.vscode-intelephense-client",
-            "junstyle.php-cs-fixer",
-            "felixfbecker.php-debug",
-            "sonarsource.sonarlint-vscode"
-        ]
-    }
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"php.validate.enable": true,
+		"php.suggest.basic": false,
+		"intelephense.environment.phpVersion": "8.2",
+		"intelephense.format.enable": true,
+		"intelephense.completion.triggerParameterHints": true,
+		"intelephense.completion.insertUseDeclaration": true,
+		"intelephense.trace.server": "messages",
+		"intelephense.diagnostics.undefinedTypes": false,
+		"intelephense.diagnostics.undefinedFunctions": false,
+		"intelephense.diagnostics.undefinedConstants": false,
+		"intelephense.diagnostics.undefinedClassConstants": false,
+		"intelephense.diagnostics.undefinedMethods": false,
+		"intelephense.diagnostics.undefinedProperties": false,
+		"php-cs-fixer.executablePath": "${extensionPath}/php-cs-fixer.phar",
+		"php-cs-fixer.lastDownload": 0,
+		"php-cs-fixer.config": ".php-cs-fixer.php",
+		"php-cs-fixer.onsave": true,
+		"sonarlint.output.showAnalyzerLogs": true,
+		"sonarlint.output.showVerboseLogs": true,
+		"sonarlint.trace.server": "messages"
+	}
 }

@@ -50,6 +50,7 @@ model User {
   accounts              Account[]
   sessions              Session[]
   orders                Order[]
+  tasks                 Task[]
   vendorProfile         VendorProfile?
   wallets               CryptoWallet[]
   payoutSettings        PayoutSetting[]
@@ -145,6 +146,19 @@ model OrderItem {
   metadata  Json?
 }
 
+model Task {
+  id          String      @id @default(cuid())
+  description String
+  completed   Boolean     @default(false)
+  priority    TaskPriority @default(MEDIUM)
+  dueDate     DateTime?
+  userId      String
+  user        User        @relation(fields: [userId], references: [id])
+  productId   String?     // Optional link to a product
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
 enum UserRole {
   ADMIN
   CUSTOMER
@@ -207,4 +221,11 @@ enum PayoutSchedule {
   WEEKLY
   BIWEEKLY
   MONTHLY
+}
+
+enum TaskPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
 }

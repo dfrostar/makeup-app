@@ -1,235 +1,101 @@
-# Makeup Discovery Platform
+# Beauty Task Manager
 
-A modern, AI-powered platform connecting users with makeup looks, techniques, products, and professionals. Our platform serves as a curated visual discovery system, helping users find and achieve their desired makeup styles through tutorials, product recommendations, and professional services.
+An intelligent beauty task management system for organizing beauty routines, appointments, and product testing schedules. Perfect for makeup enthusiasts, beauty professionals, and anyone looking to maintain a consistent beauty regimen.
 
-## Key Features
+## Features
 
-### Visual Discovery
-- Pinterest-style interface for makeup looks and techniques
-- AI-curated content from Instagram, YouTube, TikTok, and Pinterest
-- Smart filtering by physical characteristics, style preferences, and more
-- Virtual try-on capabilities with AR technology
-- Real-time face mapping and makeup simulation
-- Interactive AR tutorial overlays
+- 🧠 **AI-Powered Task Detection**: Automatically detect and create beauty tasks from natural language
+- 💬 **Chat Interface**: Interact with the system through a conversational UI
+- 🔄 **Real-Time Updates**: Tasks update in real-time across devices
+- 🔒 **User Authentication**: Secure login with Google OAuth
+- 📱 **Mobile-Friendly**: Responsive design works on all devices
+- ✨ **Beauty Categories**: Organize tasks by specific beauty categories (Skincare, Makeup, etc.)
+- 💾 **Persistent Storage**: Tasks remain saved even after server restarts
+- 🌈 **Visual Organization**: Color-coded categories and priorities for easy visual scanning
 
-### Smart Recommendations
-- AI-powered personalized suggestions
-- Product recommendations with price comparisons
-- Professional makeup artist matching
-- Trending looks and techniques
-- Cultural preference awareness
-- Regional style recommendations
+## Tech Stack
 
-### Look Management
-- Seasonal look discovery
-- Cultural color palettes
-- Look comparison tools
-- Look scheduling with notifications
-- Interactive tutorials
-- Trend categories and filtering
+- **Frontend**: Next.js with TypeScript, React
+- **State Management**: React Hooks
+- **Styling**: Tailwind CSS
+- **Data Storage**: File-based JSON storage (with database integration planned)
+- **Authentication**: OAuth (Google)
+- **AI Processing**: Rule-based NLP with plans for LLM integration
 
-### User Experience
-- Customizable collections and boards
-- Progress tracking and achievements
-- Email/SMS notifications for saved looks and deals
-- Interactive tutorials and AR guides
+## Beauty-Specific Categories
 
-### Professional Integration
-- Verified professional profiles
-- Portfolio showcases
-- Service area listings
-- Future booking capabilities
+The system organizes tasks into beauty-specific categories:
 
-## Quick Start
+- **Skincare**: Routines, treatments, and product testing
+- **Makeup**: Application techniques, trends, and product testing
+- **Haircare**: Treatments, styling, and maintenance
+- **Nailcare**: Manicures, pedicures, and treatments
+- **Fragrance**: Testing and collection management
+- **Appointments**: Salon, spa, and professional services
+- **Shopping**: Product purchases and wishlist management
+- **Wellness**: Beauty-related wellness activities
+- **Other**: Miscellaneous beauty tasks
 
-1. Double-click `start-servers.bat` to launch both backend and frontend servers
-   - Backend will run on: http://localhost:8000
-   - Frontend will run on: http://localhost:3000
-
-## Manual Setup
+## Getting Started
 
 ### Prerequisites
-- Node.js 18 or higher
-- npm 9 or higher
-- Python 3.11 or higher
-- PostgreSQL 16 or higher
-- WebGL-enabled browser for AR features
-- Camera access for virtual try-on features
 
-### Backend Setup
-1. Configure database:
+- Node.js 16+
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
    ```bash
-   php tests/setup_test_env.php
-   php tests/insert_test_data.php
+   git clone https://github.com/yourusername/beauty-task-manager.git
+   cd beauty-task-manager
    ```
 
-2. Start PHP server:
-   ```bash
-   php -S localhost:8000 -t public
-   ```
-
-### Frontend Setup
-1. Navigate to frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
+2. Install dependencies
    ```bash
    npm install
    ```
 
-3. Start development server:
+3. Run the development server
    ```bash
    npm run dev
    ```
 
-## Directory Structure
+4. Open [http://localhost:3333](http://localhost:3333) in your browser
 
-```
-Makeup/
-├── frontend/              # Next.js Frontend
-│   ├── app/              # Pages and layouts
-│   ├── components/       # React components
-│   ├── lib/             # Core TypeScript modules
-│   │   ├── animations.ts # Animation utilities
-│   │   ├── api.ts       # API and data fetching
-│   │   ├── features.ts  # Feature implementations
-│   │   └── main.ts      # Main application entry
-│   └── models/          # TypeScript interfaces and models
-├── backend-python/       # Python Backend
-├── docs/                # Documentation
-│   ├── CONTRIBUTING.md  # Contribution guidelines
-│   └── IMPLEMENTATION_GUIDE.md # Implementation details
-├── config/              # Configuration files
-├── tests/               # Test files
-└── database/           # Database scripts
-```
+## Project Structure
 
-## API Endpoints
+- `/app` - Next.js app directory
+  - `/api` - API routes for task management
+  - `/components` - React components including beauty-specific UI
+  - `/hooks` - Custom React hooks for task management
+  - `/lib` - Utility libraries and store
+  - `/types` - TypeScript type definitions including beauty categories
 
-- `GET /api/professionals` - List all professionals
-- `GET /api/professionals/{id}` - Get professional details
-- `GET /api/services` - List all services
-- `GET /api/reviews` - List all reviews
-- `POST /api/bookings` - Create a new booking
+## Recent Enhancements
 
-## Current Status (January 2024)
+- ✅ **Beauty Task Categories**: Added dedicated categories for all beauty-related activities
+- ✅ **Persistent Storage**: Implemented file-based storage to save tasks between sessions
+- ✅ **Enhanced Date Handling**: Improved validation and processing of due dates
+- ✅ **Visual Category Tags**: Color-coded category tags for easier task organization
+- ✅ **Category Filtering**: Added ability to filter tasks by beauty category
 
-### Completed Features
-- Basic visual discovery system with AI-powered content aggregation
-- User collections and boards functionality
-- Smart filtering and categorization system
-- Initial AR face mapping implementation
-- Professional profile structure
-- Basic content recommendation engine
+## Upcoming Features
 
-### In Progress
-- Enhanced AR virtual try-on capabilities
-- Professional verification system
-- Booking system integration
-- Advanced AI-powered trend prediction
-- Social commerce features
-- Sustainability badges and certifications
+- [ ] Product Database Integration: Associate tasks with specific beauty products
+- [ ] Routine Builder: Create and manage scheduled beauty routines
+- [ ] AI-Powered Beauty Recommendations: Get personalized beauty task suggestions
+- [ ] Seasonal Beauty Planning: Tools for planning seasonal beauty changes
+- [ ] Beauty Professional Integration: Connect with beauty professionals for appointments
 
-For detailed implementation status and upcoming features, see [UNIFIED-ROADMAP.md](./UNIFIED-ROADMAP.md)
+## Contributing
 
-## Development Roadmap
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-See our detailed implementation plan in [UNIFIED-ROADMAP.md](./UNIFIED-ROADMAP.md)
+## License
 
-## Environment Configuration
-
-### Backend
-- Development: Uses `config/env.php`
-- Production: Uses environment variables:
-  - `DB_HOST`
-  - `DB_PORT`
-  - `DB_NAME`
-  - `DB_USER`
-  - `DB_PASSWORD`
-  - `DB_SCHEMA`
-  - `FRONTEND_URL`
-  - `APP_ENV`
-
-### Frontend
-- `.env.local` contains development configuration
-- Environment variables:
-  - `NEXT_PUBLIC_API_URL`
-  - `NEXT_PUBLIC_SITE_NAME`
-  - `NEXT_PUBLIC_ENVIRONMENT`
-
-## AI Features Documentation
-
-The Beauty Directory Platform includes sophisticated AI features for content management, search, and recommendations. Here's where to start:
-
-1. [Getting Started with AI](docs/guides/AI-GETTING-STARTED.md)
-   - Quick start guide
-   - Basic usage examples
-   - React integration
-   - Best practices
-
-2. [AI Agents](docs/features/AI-AGENTS.md)
-   - Agent architecture
-   - Content quality analysis
-   - Search ranking
-   - Performance monitoring
-
-3. [AI Services](docs/AI-SERVICES.md)
-   - Service interfaces
-   - Key features
-   - Usage examples
-   - Performance metrics
-
-4. [AI Implementation](docs/AI-IMPLEMENTATION.md)
-   - Technical details
-   - Core services
-   - Integration patterns
-   - Advanced usage
-
-## Development
-
-- Backend uses PHP 8.4 with PostgreSQL
-- Frontend uses Next.js 14 with TypeScript and Tailwind CSS
-- API follows RESTful principles
-- CORS is configured for local development
-
-### Prerequisites
-- Node.js 18 or higher
-- npm 9 or higher
-- Python 3.11 or higher
-- PostgreSQL 16 or higher
-
-### Frontend Development
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Start development server:
-   ```bash
-   npm run dev
-   ```
-
-3. Build for production:
-   ```bash
-   npm run build
-   ```
-
-### Documentation
-- View documentation: `npm run docs:dev`
-- Build documentation: `npm run docs:build`
-- Test documentation: `npm run docs:test`
-- Deploy documentation: `npm run docs:deploy`
-
-## Production Deployment
-
-1. Set environment variables
-2. Build frontend:
-   ```bash
-   cd frontend
-   npm run build
-   ```
-3. Configure web server (Apache/Nginx) for PHP
-4. Configure SSL certificates
-5. Set up database backups
+MIT License
